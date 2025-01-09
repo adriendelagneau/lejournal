@@ -51,7 +51,7 @@ export const {
         }
 
         if (token.role && session.user) {
-            session.user.role = token.role as Role
+            session.user.role = token.role 
         }
 
         return session
