@@ -2,7 +2,7 @@ import GitHub from "next-auth/providers/github"
 import Google from "next-auth/providers/google"
 
 import type { NextAuthConfig } from "next-auth"
-import Twitter from "next-auth/providers/twitter"
+
  
 export default { 
     providers: [
@@ -14,9 +14,5 @@ export default {
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         }),
-        Twitter({
-            clientId: process.env.TWITTER_CLIENT_ID,
-            clientSecret: process.env.TWITTER_CLIENT_SECRET, 
-        })
     ] 
 } satisfies NextAuthConfig
