@@ -47,7 +47,7 @@ const LoginForm = () => {
     }
   }
 
-  const onclick = async (provider: "google" | "github") => {
+  const onclick = async (provider: "google" | "github" | "twitter") => {
     signIn(provider, { callbackUrl: DEFAULT_REDIRECT })
   }
 
@@ -138,6 +138,31 @@ const LoginForm = () => {
         onClick={() => {
           setIsGithubLoading(true)
           onclick("github")
+        }}
+        disabled={isPending}
+      >
+        {isGithubLoading ? (
+          <Loader2 className="w-5 h-5 animate-spin" />
+        ) : (
+          <>
+            <img
+              src="/svg/github.svg"
+              alt="GitHub Icon"
+              className="w-5 h-5"
+            />
+            <span className="text-sm font-medium text-gray-700">
+              Sign in with GitHub
+            </span>
+          </>
+        )}
+      </button>
+
+        {/* GitHub Login */}
+        <button
+        className="w-full flex items-center justify-center space-x-2 py-2 border border-gray-300 rounded-md hover:bg-gray-100 disabled:opacity-50 mt-3"
+        onClick={() => {
+          setIsGithubLoading(true)
+          onclick("twitter")
         }}
         disabled={isPending}
       >
