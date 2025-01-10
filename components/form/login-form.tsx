@@ -171,7 +171,7 @@ const LoginForm = () => {
         ) : (
           <>
             <img
-              src="/svg/github.svg"
+              src="/svg/twitter.svg"
               alt="GitHub Icon"
               className="w-5 h-5"
             />
