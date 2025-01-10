@@ -3,6 +3,7 @@ import Google from "next-auth/providers/google"
 
 import type { NextAuthConfig } from "next-auth"
 import Twitter from "next-auth/providers/twitter"
+import Facebook from "next-auth/providers/facebook"
  
 export default { 
     providers: [
@@ -14,9 +15,9 @@ export default {
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         }),
-        Twitter({
-            clientId: process.env.TWITTER_CLIENT_ID,
-            clientSecret: process.env.TWITTER_CLIENT_SECRET, 
+        Facebook({
+            clientId: process.env.FACEBOOK_CLIENT_ID,
+            clientSecret: process.env.FACEBOOL_CLIENT_SECRET, 
         })
     ] 
 } satisfies NextAuthConfig

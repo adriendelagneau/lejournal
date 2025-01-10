@@ -47,7 +47,7 @@ const LoginForm = () => {
     }
   }
 
-  const onclick = async (provider: "google" | "github" | "twitter") => {
+  const onclick = async (provider: "google" | "github" | "facebook") => {
     signIn(provider, { callbackUrl: DEFAULT_REDIRECT })
   }
 
@@ -162,7 +162,7 @@ const LoginForm = () => {
         className="w-full flex items-center justify-center space-x-2 py-2 border border-gray-300 rounded-md hover:bg-gray-100 disabled:opacity-50 mt-3"
         onClick={() => {
           setIsGithubLoading(true)
-          onclick("twitter")
+          onclick("facebook")
         }}
         disabled={isPending}
       >
