@@ -82,7 +82,7 @@ export const {
  },
   providers: [
     Resend({
-        from: "onboarding@resend.dev"
+        from: "mail@l-echo-du-web.online"
     }),
     ...authConfig.providers,
   ],
